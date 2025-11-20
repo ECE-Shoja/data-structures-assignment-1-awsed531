@@ -4,6 +4,7 @@ using namespace std;
 vector<int> parent, sz;
 
 int findSet(int v) {
+    // TODO: implement path compression
     if (v == parent[v]) return v;
     return parent[v] = findSet(parent[v]);
 }
